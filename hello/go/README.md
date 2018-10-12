@@ -65,4 +65,4 @@ In Go, simply put them all in the `vendor/` directory.
 # Next Up
 ## [Part 2: Input Parameters](../../params)
 
-Testing included regions
+Testing git included regions
