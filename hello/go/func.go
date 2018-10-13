@@ -14,7 +14,7 @@ type person struct {
 func main() {
 	p := &person{Name: "World"}
 	json.NewDecoder(os.Stdin).Decode(p)
-	mapD := map[string]string{"message": fmt.Sprintf("Hello %s", p.Name)}
+	mapD := map[string]string{"message": fmt.Sprintf("Hello %s, from FN Server", p.Name)}
 	mapB, _ := json.Marshal(mapD)
 	fmt.Println(string(mapB))
 
