@@ -18,12 +18,12 @@ type Person struct {
 }
 
 func myHandler(ctx context.Context, in io.Reader, out io.Writer) {
-	p := &Person{Name: "World"}
+	p := &Person{Name: "Mundo"}
 	json.NewDecoder(in).Decode(p)
 	msg := struct {
 		Msg string `json:"message"`
 	}{
-		Msg: fmt.Sprintf("Hello %s", p.Name),
+		Msg: fmt.Sprintf("Hola %s", p.Name),
 	}
 	json.NewEncoder(out).Encode(&msg)
 }
