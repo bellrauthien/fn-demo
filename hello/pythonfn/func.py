@@ -18,4 +18,4 @@ try:
 except:
   pass
 
-print "Hello", name, "!!!!!!!!!"
+print "Hello", name, "!!!"
