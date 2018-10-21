@@ -1,11 +1,9 @@
-name = "World";
-fs = require('fs');
-try {
-	obj = JSON.parse(fs.readFileSync('/dev/stdin').toString())
-	if (obj.name != "") {
-		name = obj.name
-	}
-} catch(e) {}
-console.log("Hello", name, "from Node!");
-
-console.error("Stderr goes to the server logs...");
+const fdk=require('@fnproject/fdk');
+ 
+fdk.handle(function(input){
+  let name = 'World';
+  if (input.name) {
+    name = input.name;
+  }
+  return {'message': 'Hello ' + name}
+})
