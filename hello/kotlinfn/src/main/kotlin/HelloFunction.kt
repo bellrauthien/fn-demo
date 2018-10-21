@@ -2,6 +2,6 @@
 package com.fn.example
 
 fun hello(input: String) = when {
-    input.isEmpty() -> ("Hola, world!")
+    input.isEmpty() -> ("Hooooooooooooooppppeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeee, world!")
         else -> ("Holaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa, ${input}")
 }
