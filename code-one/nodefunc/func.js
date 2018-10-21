@@ -5,5 +5,5 @@ fdk.handle(function(input){
   if (input.name) {
     name = input.name;
   }
-  return {'message': 'YAAAAA ' + name}
+  return {'message': 'YAAAAAAA ' + name}
 })
