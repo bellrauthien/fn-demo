@@ -7,7 +7,7 @@ def handler(ctx, data=None, loop=None):
     if data and len(data) > 0:
         body = json.loads(data)
         name = body.get("name")
-    return {"message": "Hola {0}".format(name)}
+    return {"message": "Hola plato {0}".format(name)}
 
 
 if __name__ == "__main__":
