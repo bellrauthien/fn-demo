@@ -1,21 +1,14 @@
-import sys
-import os
+import fdk
 import json
 
-sys.stderr.write("Starting Python Function\n")
 
-name = "World"
+def handler(ctx, data=None, loop=None):
+    name = "World"
+    if data and len(data) > 0:
+        body = json.loads(data)
+        name = body.get("name")
+    return {"message": "Hola {0}".format(name)}
 
-try:
-  if not os.isatty(sys.stdin.fileno()):
-    try:
-      obj = json.loads(sys.stdin.read())
-      if obj["name"] != "":
-        name = obj["name"]
-    except ValueError:
-      # ignore it
-      sys.stderr.write("no input, but that's ok\n")
-except:
-  pass
 
-print "Hola Mundo Mundo ", name
+if __name__ == "__main__":
+    fdk.handle(handler)
