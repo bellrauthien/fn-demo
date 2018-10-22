@@ -18,7 +18,7 @@ type Person struct {
 }
 
 func myHandler(ctx context.Context, in io.Reader, out io.Writer) {
-	p := &Person{Name: "Mundo"}
+	p := &Person{Name: "World"}
 	json.NewDecoder(in).Decode(p)
 	msg := struct {
 		Msg string `json:"message"`
